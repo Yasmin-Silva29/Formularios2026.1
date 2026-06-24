@@ -5,8 +5,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios HTML</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     
+     <!--         =FORMULARIO==
+      * Sao ultizados para coletar dados dos usuarios,como informacoes de login,detalhes de contato,pesquisas,entre outros.
+
+      *Para criar um Formulario,utilizamos a tag <FORM>.Dentro dela,incluimos diversos  elementos,como campo de texto,caixa de selecao,botoes,etc.
+
+         Dentro dela pode ter alguns atributos:
+
+            *action :Especifica a URL para onde os dados do formulario serao enviados.
+           *method:Define que acao deve ser executada com as informacoes (geralmente GET ou POST).
+            
+             GET:Utilize quando estiver realizando uma requisicao que nao altera o estado do servidor,como solicitacoes  de busca ,navegacao entre paginas,tec.
+
+              POST:Utilize quando estiver realizando uma requisicao  que altera o estado do servidor,como envio de formularios de cadastro,login,atualizacao de dados ou envio de arquivos.
+ 
+           == PRINCIPAIS  TAGS ==
+
+        <input>:Utilizado para criar diferente tipos de campos de entrada.
+
+          *type:Define o tipo de entrada (text,email,passaword,submit,etc.).
+
+         *name:Atribui um nome ao campo,usado para identificar os dados no servidor.
+
+         *id:Usando para associar rotulos(<label>) aos campos.
+
+            
+        <label>:Descreve o proposito de um campo de entrada.
+         for:Associa o rotulo a um campo de entrada pelo seu id.
+
+============================================>
+            <h1>Tipos de Formularios HTML</h1>
+
+           <!-- Cadastrar os atributos do formulario -->
+             <form action="#"method="post">
+
+                <div>
+                    <label for="nome">Nome:</label>
+                  <input type="text"name="nome" id="nome">
+                </div>
+            
+                <!--Atributos Name e For-->
+                 <label for="idade">Qual a sua idade</label>
+                 <input type="text" name="idade">
+                 </div>
+
+                 <!--TAG Select-->
+                 <div>
+                    <label for="trabalho ">Selecione sua profissao:</label>
+                 <select name="trabalho" id="trabalho">
+                     <option value="programador">Programador</option>
+                     <option value="cozinheiro">Cozinheiro</option>
+
+                     <option value="vasp">VASP</option>
+                    </select>
+                 </div>
+             
+             
+                <!-- Atributo Selected-->
+                 <div>
+                    <label for="contrato">Voce leu os termos do contrato</label>
+                    <select name="contrato" id="contrato">
+                        <option value="sim">SIM</option>
+                        <option value="nao"Selected>NAO</option>
+                    </select>
+                 </div>
+
+                 <!--Atributo multiple(Multiplas Selecoes)-->
+                 <div>
+                     <label for="ingredientes">Selecione os ingredientes para fazer o seu lanche:</label>
+                <select name="ingredientes" id="ingredientes" multiple>
+                 <option value="hamburgues">hamburgues</option>
+                 <option value="queijo">queijo</option>
+                 <option value="alface">Alface</option>
+                 <option value="molho">Molho especial</option>
+                 <option value="cebola">Cebola</option>
+                 <option value="picles">Picles</option>
+                 <option value="pao">Pao com Gergelim</option>
+                     </select>
+                 </div>
+            <!-- TAG textarea-->
+             <div>
+                <label for="comentario">Comente aqui em poucas palavras o que achou do video?</label>
+                <textarea name="comentario" id="comentario"></textarea>
+             </div>
+
+             <!--TAG Fildset-->
+             <!--Tag Legend:E como um label, que descreve os inputs agrupados.-->
+             <fieldset>
+             <legend>Vamos falar  serio agora!Qual o seu nome  de verdade?</legend>
+             <label for="primeironome">Primeiro Nome:</label>
+             <input type="text" name="primeironome">
+
+             <label for="sobrenome">Sobrenome:</label>
+             <input type="text" name="sobrenome">
+             </fieldset>
+
+             <!--TAG  Datalist (Parecida com a tag select,porem com autocomplete)-->
+             <div>
+                <label for ="sabor">Escolha o seu sabor de sorvete preferido:</label>
+                <input type="text"name="sabor" list="sabores">
+
+                <datalist             id="sabores">
+                    <option value="pistache"></option>
+                    <option value="tamarindo"></option>
+                    <option value="graviola"></option>
+                  <option value="manga"></option>
+                  <option value="caju"></option>
+                </datalist>
+             </div>
+
+             <label for="passaword">Digite aqui a sua senha.</label>
+             <input type="password" name="passaword" id="passaword">
+
+            <!--Input Radio:Usado para selecionar apenas uma opcao.-->
+             <div>
+               <label for="modeloCarro">Escolha o modelo do seu carro:</label>
+               <div class="Radio">
+                   <input type="radio" name="brasilia" id="brasilia" value="brasilia">
+                   <label for="brasilia">Brasilia Amarela</label>
+                </div>
+         
+                <div class="radio">
+                    <input type="radio"name="jegue" id="jegue" value="jegue">
+                    <label for="jegue">Jeguezim Maroto</label>
+                </div>
+
+                 <div class="radio"></div>
+                 <input type="radio" name="bike" id="bike" value="bike">
+                 <label for="bike">Bicicleta</label>
+                </div>
+            </div>
+
+                 <!-- Input Checkbox:Parecido com o Radio,mas podemos selecionar ,mais de um opcao e tambem retirar itens ja selecionados.-->
+
+                 <div>
+                    <label for="linguagem">Quais das linguagens de programacao voce nao conhece?</label>
+
+                    <div           
+                       class="radio">
+                     <input type="checkbox" name="linguagem" id="c">
+                     <label for="c">C#</label>
+                    </div>
+
+                    <div        
+                     class="radio">
+                        <input type="checkbox" name="linguagem" id="java">
+                        <label for="java">JAVA</label>
+                    </div>
+                    
+                      <div           class="radio">
+                        <input type="checkbox" name="linguagem" id="python">
+                        <label for="python">PHYTON</label>
+                    </div>
+            </div>
+             <!-- Input para Datas-->
+              <div>
+                <label for="aniversario">Qual o dia do seu aniversario?</label>
+                <input type="date" name="" id="">
+              </div>
+
+              <!--Input para uploads de arquivos-->
+              <div>
+                <label for="imagem">Carregue aqui a sua imagem de perfil.</label>
+
+                <input type="file" name="imagem" id="imagem">
+              </div>
+
+                <!-- Input para numeros-->
+                 <label for="salario">Qual o valor do seu salario?</label>
+                 <input type="number" name="salario" id="salario">
+               </div>
+
+
+               <!--Iput para email-->
+                 <label for="email">Qual o seu e-mail?</label>
+               </div>
+
+                 <!--Atributo Value:Um Valor ja preenchido.-->
+                 <div>
+                  <label for="nome">Nome do Individuo:</label>
+                  <input type="text" name="nome" id="nome" value="Equipe 01-">
+                 </div>
+
+                  <!--Atributo Disable:Desabilita o campo da para uso.-->
+                  <div>
+                    <p>Tente mudar o texto.</p>
+                    <input type="text" name="name" id="name" value="nao precisa preencher" disabled>
+               </div>
+               <!--Atributo  Placeholder: e um espaco reservado,um texto temporario ou um elemento de amostra usado em design,programacao e edicao de texto.Ele serve para oriente o usuario sore o que deve ser preenchido ou como o conteudo final sera exibido.-->
+
+               <div>
+                <label for="nome">Nome do Aluno:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite aqui o nome completo do Aluno.">
+
+                <!--Atributo Required:E um tipo de validacao de campo HTML.-->
+                <div>
+                    <label for="aniversario">(*) Ano de Nascimento</label>
+                    <input type="date" name="aniversario" id="aniversario" required>
+                </div>
+                <!--Botao de envio.-->
+                 <input type="submit" value="Enviar Formulario">
+
+                 <!--Botao de Reset-->
+                 <input type="reset" value="limpar o formulario">
+                 
+
+</div>
+
+                </form>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
